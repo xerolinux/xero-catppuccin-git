@@ -34,8 +34,8 @@ if pacman -Qs kvantum && pacman -Qs latte-dock; then
 fi
 sleep 2
 echo
-echo "Installing Nord Theme & Packages"
-echo "################################"
+echo "Installing Catppuccin Theme & Packages"
+echo "######################################"
 # Check if any of the specified packages are installed and install them if not present
 packages="xero-kde-config xero-catppuccin-sddm lightly-git latte-dock-git asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
 echo
@@ -47,14 +47,6 @@ sleep 2
 echo
 echo "Removing No longer needed Packages"
 sudo pacman -Rns --noconfirm catppuccin-kde-theme-mauve-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null
-sleep 2
-echo
-echo "Applying Grub Theme...."
-echo "#################################"
-chmod +x Grub.sh
-sudo ./Grub.sh
-sudo sed -i "s/#GRUB_GFXMODE=640x480/GRUB_GFXMODE=1920x1080/g" /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
 sleep 2
 echo
 # Clone GTK theme repository and install
@@ -78,6 +70,14 @@ echo "#################################"
 cp -Rf Configs/Home/. ~
 sudo cp -Rf Configs/System/. /
 sudo cp -Rf Configs/Home/. /root/
+sleep 2
+echo
+echo "Applying Our Custom Grub Theme..."
+echo "#################################"
+chmod +x Grub.sh
+sudo ./Grub.sh
+sudo sed -i "s/#GRUB_GFXMODE=640x480/GRUB_GFXMODE=1920x1080/g" /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 sleep 2
 echo
 echo "#############################################"
