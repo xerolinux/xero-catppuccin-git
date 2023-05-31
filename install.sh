@@ -60,12 +60,12 @@ echo
 # Clone GTK theme repository and install
 echo "Installing catppuccin GTK4 theme & Applying LibAdwaita Patch"
 git clone --recurse-submodules https://github.com/catppuccin/gtk.git && cd gtk/ && pip3 install -r requirements.txt
-python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && sh /usr/local/bin/stylepak install-system Catppuccin-Mocha-Standard-Mauve-Dark && rm -Rf gtk/
+python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && sh /usr/local/bin/stylepak install-system Catppuccin-Mocha-Standard-Mauve-Dark && cd .. && rm -Rf gtk/
 sleep 2
 echo
 # Clone KDE theme repository and install
 echo "Installing catppuccin KDE theme..."
-git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && rm -Rf catppuccin-kde/
+git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd .. && rm -Rf catppuccin-kde/
 sleep 2
 echo
 # Update SDDM configuration
