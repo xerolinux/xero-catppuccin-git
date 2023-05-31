@@ -1,0 +1,13 @@
+9
+
+https://wormhole.app/
+https://wormhole.app/service-worker.js
+true
+{2274e8fc-b694-4269-81ee-d67746c56d0c}
+2
+1682094295692554
+1682094295693585
+1682094294702493
+0
+true
+#

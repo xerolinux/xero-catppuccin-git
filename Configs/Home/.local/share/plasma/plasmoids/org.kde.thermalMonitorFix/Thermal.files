@@ -1,0 +1,13 @@
+contents/code/config-utils.js
+contents/code/model-utils.js
+contents/code/temperature-utils.js
+contents/config/config.qml
+contents/config/main.xml
+contents/fonts/fontawesome-webfont-4.3.0.ttf
+contents/images/thermal-monitor.svg
+contents/ui/TemperatureItem.qml
+contents/ui/config/ConfigAppearance.qml
+contents/ui/config/ConfigMisc.qml
+contents/ui/config/ConfigTemperatures.qml
+contents/ui/main.qml
+metadata.desktop

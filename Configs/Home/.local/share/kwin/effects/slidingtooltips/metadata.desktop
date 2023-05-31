@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment=Sliding animation for Plasma tooltips
+Encoding=UTF-8
+Icon=plasma
+Name=Sliding tooltips
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=David Rosca
+X-KDE-PluginInfo-Category=Appearance
+X-KDE-PluginInfo-Email=nowrep@gmail.com
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=slidingtooltips
+X-KDE-PluginInfo-Version=1
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=KWin/Effect
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-Ordering=60
+X-Plasma-API=javascript
+X-Plasma-MainScript=code/slidingtooltips.js
