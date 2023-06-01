@@ -25,9 +25,9 @@ echo
 echo "Substituting some Packages with others"
 echo "######################################"
 # Check if kvantum and latte-dock exist
-if pacman -Qs kvantum && pacman -Qs latte-dock; then
+if pacman -Qs kvantum && pacman -Qs latte-dock && pacman -Qs catppuccin-cursors-mocha-mauve && pacman -Qs catppuccin-gtk-theme-mocha-mauve && pacman -Qs catppuccin-kde-theme-mauve-git; then
   # Remove kvantum and latte-dock
-  sudo pacman -Rns --noconfirm kvantum latte-dock > /dev/null 2>&1
+  sudo pacman -Rns --noconfirm kvantum latte-dock catppuccin-cursors-mocha-mauve catppuccin-gtk-theme-mocha-mauve catppuccin-kde-theme-mauve-git > /dev/null 2>&1
   echo
   # Install latte-dock-git and lightly-git
   sudo pacman -S latte-dock-git lightly-git --noconfirm --needed > /dev/null 2>&1
