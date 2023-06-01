@@ -2,7 +2,7 @@
 
 ### Disclosure
 
-> I would like to clarify one very important aspect of ricing. We use custom themes in every one of our rices, and those might not get updated very often, if at all by their respective developers/artists, which might result in some parts of the system and apps not to get themed correctly. That, my friends, is unfortunately out of our hands. In case that happens, kindly report back, we will check with them for any fixes/updates, if none are available, we will have no choice but to archive affected rice, and hide it, until fixes are applied and themes updated...
+> I would like to clarify one very important aspect of ricing. We use custom themes in every one of our rices, and those might not get updated very often, if at all by their respective developers/artists, which might result in some parts of the system and apps not to get themed correctly. That, my friends, is unfortunately out of our hands.
 
 ![XeroLayan](https://i.imgur.com/I5MayRg.png)
 
@@ -19,6 +19,10 @@ Just clone this repository, run terminal inside directory and run installer Scri
 ### Reminder
 
 Please follow the script instructions and answer some prompts with `y` when asked, if any, and select the right option for others. You might see a few errors pop up here n there, ignore them and let it do its thing. Once script is done your are urged to save any work you are doing and reboot for rice to be loaded and applied. Keep in mind that it will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [Discord Server](https://discord.gg/Xg6T78ahtK). Best of luck !
+
+### Applying Theme/Rice Updates
+
+When you initially apply the rice, you will be getting latest theme/rice code in straight from source, but in case there are updates to the underlying themes or rice itself, as I keep applying various optimizations, and want to apply them, well, that will be difficult without having to re-apply the rice, which will replace any and/or all your own modifications should you have applied any. Unfortunately it is what it is. Only do it if and when you feel confident enough and know how to restore your settings from backup afterwards. Sorry about that. I hope that covers that lol ;)
 
 ## Script will do the following steps :
 
