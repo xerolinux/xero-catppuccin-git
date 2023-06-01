@@ -22,7 +22,7 @@ Just clone this repository, run terminal inside directory and run installer Scri
 
 ### Reminder
 
-Please follow the script instructions and answer some prompts with `y` when asked and select the right option for others. You might see a few errors pop up here n there, ignore them and let it do its thing. Once script is done your are urged to save any work you are doing and reboot for rice to be loaded and applied. Keep in mind that will backup your app settings before applying and overring them with new ones, so please do not report that. You have been warned. In case of any issues please find us on our [Discord Server](https://discord.gg/Xg6T78ahtK). Best of luck !
+Please follow the script instructions and answer some prompts with `y` when asked, if any, and select the right option for others. You might see a few errors pop up here n there, ignore them and let it do its thing. Once script is done your are urged to save any work you are doing and reboot for rice to be loaded and applied. Keep in mind that it will backup your app settings before applying and overriding them with new ones, so please do not report that. You have been warned. In case of any issues please find us on our [Discord Server](https://discord.gg/Xg6T78ahtK). Best of luck !
 
 ## Script will do the following steps :
 
@@ -30,7 +30,6 @@ Please follow the script instructions and answer some prompts with `y` when aske
 - Download and install necessary packages if needed...
 - Override your settings and files with this rice's.
 - Install and apply New Grub Theme...
-- Reboot system to get everything loaded... 
 
 # F.A.Q
 
