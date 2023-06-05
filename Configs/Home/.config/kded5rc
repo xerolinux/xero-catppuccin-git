@@ -10,6 +10,9 @@ autoload=true
 [Module-browserintegrationreminder]
 autoload=false
 
+[Module-colorcorrectlocationupdater]
+autoload=false
+
 [Module-device_automounter]
 autoload=false
 
@@ -23,9 +26,6 @@ autoload=true
 autoload=true
 
 [Module-kded_accounts]
-autoload=true
-
-[Module-kded_bolt]
 autoload=true
 
 [Module-kded_touchpad]
@@ -56,13 +56,13 @@ autoload=true
 autoload=true
 
 [Module-plasmavault]
-autoload=false
+autoload=true
 
 [Module-printmanager]
 autoload=true
 
 [Module-proxyscout]
-autoload=true
+autoload=false
 
 [Module-remotenotifier]
 autoload=true
