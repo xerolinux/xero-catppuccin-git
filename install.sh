@@ -30,6 +30,7 @@ echo "######################################"
 packages="lightly-git xero-kde-config xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
 echo
 echo "Installing required packages..."
+echo "###############################"
 for package in $packages; do
     pacman -Qi "$package" > /dev/null 2>&1 || sudo pacman -Syy --noconfirm --needed "$package" > /dev/null 2>&1
 done
@@ -37,17 +38,20 @@ sleep 2
 echo
 # Clone GTK theme repository and install
 echo "Installing catppuccin GTK4 theme & Applying LibAdwaita Patch"
+echo "############################################################"
 git clone --recurse-submodules https://github.com/catppuccin/gtk.git && cd gtk/ && pip3 install -r requirements.txt
 python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && sh /usr/local/bin/stylepak install-system Catppuccin-Mocha-Standard-Mauve-Dark && cd .. && rm -Rf gtk/
 sleep 2
 echo
 # Clone KDE theme repository and install
 echo "Installing catppuccin KDE theme, Plz answer with y both time..."
+echo "###############################################################"
 git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd .. && rm -Rf catppuccin-kde/
 sleep 2
 echo
 # Update SDDM configuration
 echo "Updating SDDM configuration..."
+echo "##############################"
 sudo sed -i "s/Current=.*/Current=catppuccin/g" /etc/sddm.conf.d/kde_settings.conf 2>/dev/null
 sleep 2
 echo
