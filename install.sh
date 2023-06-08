@@ -5,44 +5,34 @@ echo "Be Careful this will override your Rice!! "
 echo "##########################################"
 sleep 2
 echo
-echo "Backing up current XeroASCII      "
-echo "##################################"
+echo "Backing up current XeroASCII "
+echo "#############################"
 # Check if XeroASCII.old file exists in /etc/
 if [ -f "$HOME/XeroAscii.old" ]; then
     echo "Deleting existing XeroAscii.old file..."
-    sudo rm $HOME/XeroAscii.old
+    rm $HOME/XeroAscii.old
 fi
 # Rename XeroASCII to XeroASCII.old
 if [ -f "$HOME/XeroAscii" ]; then
     echo "Renaming XeroAscii to XeroAscii.old..."
-    sudo mv $HOME/XeroAscii $HOME/XeroAscii.old
+    mv $HOME/XeroAscii $HOME/XeroAscii.old
 fi
 echo
-echo "Substituting some Packages with others"
-echo "######################################"
-# Check if kvantum and latte-dock exist
-if pacman -Qs kvantum && pacman -Qs latte-dock && pacman -Qs catppuccin-cursors-mocha-mauve && pacman -Qs catppuccin-gtk-theme-mocha-mauve && pacman -Qs catppuccin-kde-theme-mauve-git; then
-  # Remove kvantum and latte-dock
-  sudo pacman -Rns --noconfirm kvantum &>/dev/null; sudo pacman -Rns --noconfirm latte-dock &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm  catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm  catppuccin-kde-theme-mauve-git &>/dev/null
-  echo
-  # Install latte-dock-git and lightly-git
-  sudo pacman -S latte-dock-git lightly-git --noconfirm --needed > /dev/null 2>&1
-fi
+sleep 2
+echo "Removing No longer needed Packages"
+echo "##################################"
+sudo pacman -Rns --noconfirm kvantum &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-mauve-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm qt5-virtualkeyboard &>/dev/null; sudo pacman -Rns --noconfirm qt6-virtualkeyboard &>/dev/null
 sleep 2
 echo
 echo "Installing Catppuccin Theme & Packages"
 echo "######################################"
 # Check if any of the specified packages are installed and install them if not present
-packages="xero-kde-config xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
+packages="lightly-git xero-kde-config xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
 echo
 echo "Installing required packages..."
 for package in $packages; do
     pacman -Qi "$package" > /dev/null 2>&1 || sudo pacman -Syy --noconfirm --needed "$package" > /dev/null 2>&1
 done
-sleep 2
-echo
-echo "Removing No longer needed Packages"
-sudo pacman -Rns --noconfirm catppuccin-kde-theme-mauve-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm qt5-virtualkeyboard &>/dev/null; sudo pacman -Rns --noconfirm qt6-virtualkeyboard &>/dev/null
 sleep 2
 echo
 # Clone GTK theme repository and install
