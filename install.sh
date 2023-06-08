@@ -3,10 +3,6 @@
 echo "##########################################"
 echo "Be Careful this will override your Rice!! "
 echo "##########################################"
-sleep 5
-echo "Creating Backups of ~/.config folder"
-echo "#####################################"
-cp -r ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S)
 sleep 2
 echo
 echo "Backing up current XeroASCII      "
@@ -37,7 +33,7 @@ echo
 echo "Installing Catppuccin Theme & Packages"
 echo "######################################"
 # Check if any of the specified packages are installed and install them if not present
-packages="xero-kde-config xero-catppuccin-sddm lightly-git latte-dock-git asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
+packages="xero-kde-config xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
 echo
 echo "Installing required packages..."
 for package in $packages; do
@@ -46,7 +42,7 @@ done
 sleep 2
 echo
 echo "Removing No longer needed Packages"
-sudo pacman -Rns --noconfirm catppuccin-kde-theme-mauve-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null
+sudo pacman -Rns --noconfirm catppuccin-kde-theme-mauve-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm qt5-virtualkeyboard &>/dev/null; sudo pacman -Rns --noconfirm qt6-virtualkeyboard &>/dev/null
 sleep 2
 echo
 # Clone GTK theme repository and install
@@ -56,7 +52,7 @@ python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && sh /usr/loca
 sleep 2
 echo
 # Clone KDE theme repository and install
-echo "Installing catppuccin KDE theme..."
+echo "Installing catppuccin KDE theme, Plz answer with y both time..."
 git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd .. && rm -Rf catppuccin-kde/
 sleep 2
 echo
@@ -65,11 +61,9 @@ echo "Updating SDDM configuration..."
 sudo sed -i "s/Current=.*/Current=catppuccin/g" /etc/sddm.conf.d/kde_settings.conf 2>/dev/null
 sleep 2
 echo
-echo "Applying new Rice, hold on..."
-echo "#################################"
-cp -Rf Configs/Home/. ~
-sudo cp -Rf Configs/System/. /
-sudo cp -Rf Configs/Home/. /root/
+echo "Creating Backup & Applying new Rice, hold on..."
+echo "###############################################"
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~ && sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
 sleep 2
 echo
 echo "Applying Our Custom Grub Theme..."
