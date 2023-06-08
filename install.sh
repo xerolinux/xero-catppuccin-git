@@ -23,7 +23,7 @@ echo "######################################"
 # Check if kvantum and latte-dock exist
 if pacman -Qs kvantum && pacman -Qs latte-dock && pacman -Qs catppuccin-cursors-mocha-mauve && pacman -Qs catppuccin-gtk-theme-mocha-mauve && pacman -Qs catppuccin-kde-theme-mauve-git; then
   # Remove kvantum and latte-dock
-  sudo pacman -Syy && sudo pacman -Rns --noconfirm kvantum latte-dock catppuccin-cursors-mocha-mauve catppuccin-gtk-theme-mocha-mauve catppuccin-kde-theme-mauve-git > /dev/null 2>&1
+  sudo pacman -Rns --noconfirm kvantum &>/dev/null; sudo pacman -Rns --noconfirm latte-dock &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm  catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm  catppuccin-kde-theme-mauve-git &>/dev/null
   echo
   # Install latte-dock-git and lightly-git
   sudo pacman -S latte-dock-git lightly-git --noconfirm --needed > /dev/null 2>&1
@@ -63,7 +63,8 @@ sleep 2
 echo
 echo "Creating Backup & Applying new Rice, hold on..."
 echo "###############################################"
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~ && cp -Rf Configs/Home/.config/latte ~/.config/ && sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~ && cp -Rf Configs/Home/.config/latte ~/.config/
+sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
 sleep 2
 echo
 echo "Applying Our Custom Grub Theme..."
