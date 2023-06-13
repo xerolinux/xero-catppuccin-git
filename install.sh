@@ -27,7 +27,7 @@ echo
 echo "Installing Catppuccin Theme & Packages"
 echo "######################################"
 # Check if any of the specified packages are installed and install them if not present
-packages="lightly-git xero-kde-config xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines"
+packages="lightly-git xero-kde-config xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines xero-fonts-git"
 echo
 echo "Installing required packages..."
 echo "###############################"
