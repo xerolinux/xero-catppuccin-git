@@ -40,11 +40,11 @@ echo
 echo "Installing catppuccin GTK4 theme & Applying LibAdwaita Patch"
 echo "############################################################"
 git clone --recurse-submodules https://github.com/catppuccin/gtk.git && cd gtk/ && pip3 install -r requirements.txt
-python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && sh /usr/local/bin/stylepak install-system Catppuccin-Mocha-Standard-Mauve-Dark && cd .. && rm -Rf gtk/
+python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && cd .. && rm -Rf gtk/
 sleep 2
 echo
 # Clone KDE theme repository and install
-echo "Installing catppuccin KDE theme, Plz answer with y both time..."
+echo "Installing catppuccin KDE theme, Plz answer with y both times.."
 echo "###############################################################"
 git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd .. && rm -Rf catppuccin-kde/
 sleep 2
@@ -60,6 +60,8 @@ echo "###############################################"
 cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~ && cp -Rf Configs/Home/.config/latte ~/.config/
 sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
 sleep 2
+echo
+sh /usr/local/bin/flatfix
 echo
 echo "Applying Our Custom Grub Theme..."
 echo "#################################"
