@@ -61,7 +61,18 @@ cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/H
 sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
 sleep 2
 echo
-sh /usr/local/bin/flatfix
+echo "Applying Flatpak GTK Overrides"
+echo "##############################"
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --filesystem=xdg-config/gtk-3.0:ro
+sudo flatpak override --filesystem=xdg-config/gtk-4.0:ro
+echo
+sleep 1.5
+echo "Converting Current Theme to Flatpak"
+echo "###################################"
+sleep 1.5
+stylepak install-system Catppuccin-Mocha-Standard-Mauve-Dark && stylepak install-user Catppuccin-Mocha-Standard-Mauve-Dark
+sleep 2
 echo
 echo "Applying Our Custom Grub Theme..."
 echo "#################################"
