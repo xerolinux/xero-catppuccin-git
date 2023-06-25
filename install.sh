@@ -39,6 +39,7 @@ echo
 echo "Creating Backup & Applying new Rice, hold on..."
 echo "###############################################"
 cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~ && cp -Rf Configs/Home/.config/latte ~/.config/
+rm ~/.config/ksplashrc && cp Configs/Home/.config/ksplashrc ~/.config/
 sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
 sleep 2
 echo
@@ -55,13 +56,13 @@ echo "Installing catppuccin GTK4 theme & Applying LibAdwaita Patch"
 echo "############################################################"
 git clone --recurse-submodules https://github.com/catppuccin/gtk.git
 python -m venv . && source bin/activate && pip install --upgrade pip && pip install catppuccin
-cd gtk/ && python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && cd .. && rm -Rf gtk/
+cd gtk/ && python install.py mocha -l -a mauve --tweaks float -s compact -d ~/.themes && cd ..
 sleep 2
 echo
 # Clone KDE theme repository and install
 echo "Installing catppuccin KDE theme, Plz answer with y both times.."
 echo "###############################################################"
-git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd .. && rm -Rf catppuccin-kde/
+git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd ..
 sleep 2
 echo
 # Update SDDM configuration
@@ -83,7 +84,7 @@ sleep 1.5
 stylepak install-user Catppuccin-Mocha-Standard-Mauve-dark
 stylepak install-system Catppuccin-Mocha-Standard-Mauve-dark
 sleep 2
-cd .. && rm -rf xero-catppuccin-git/
+rm -rf xero-catppuccin-git/
 echo
 echo "#############################################"
 echo "  All Done! Reboot system To activate rice.  "
