@@ -80,8 +80,8 @@ sleep 1.5
 echo "Converting Current Theme to Flatpak"
 echo "###################################"
 sleep 1.5
-stylepak install-user Catppuccin-Mocha-Standard-Mauve-dark
-stylepak install-system Catppuccin-Mocha-Standard-Mauve-dark
+stylepak install-user Catppuccin-Mocha-Compact-Mauve-dark
+stylepak install-system Catppuccin-Mocha-Compact-Mauve-dark
 sleep 2
 rm -rf xero-catppuccin-git/
 echo
