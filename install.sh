@@ -87,6 +87,7 @@ stylepak install-system Catppuccin-Mocha-Compact-Mauve-dark
 sleep 2
 cd .. && rm -rf xero-catppuccin-git/
 echo
+rm -rf .cache/
 echo "#############################################"
 echo "  All Done! Reboot system To activate rice.  "
 echo "#############################################"
