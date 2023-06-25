@@ -53,8 +53,9 @@ echo
 # Clone GTK theme repository and install
 echo "Installing catppuccin GTK4 theme & Applying LibAdwaita Patch"
 echo "############################################################"
-git clone --recurse-submodules https://github.com/catppuccin/gtk.git && cd gtk/
-python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && cd .. && rm -Rf gtk/
+git clone --recurse-submodules https://github.com/catppuccin/gtk.git
+python -m venv . && source bin/activate && pip install --upgrade pip && pip install catppuccin
+cd gtk/ && python install.py mocha -l -a mauve --tweaks normal -d ~/.themes && cd .. && rm -Rf gtk/
 sleep 2
 echo
 # Clone KDE theme repository and install
@@ -79,9 +80,10 @@ sleep 1.5
 echo "Converting Current Theme to Flatpak"
 echo "###################################"
 sleep 1.5
-stylepak install-system Catppuccin-Mocha-Standard-Mauve-Dark && stylepak install-user Catppuccin-Mocha-Standard-Mauve-Dark
+stylepak install-user Catppuccin-Mocha-Standard-Mauve-dark
+stylepak install-system Catppuccin-Mocha-Standard-Mauve-dark
 sleep 2
-rm -rf xero-catppuccin-git/
+cd .. && rm -rf xero-catppuccin-git/
 echo
 echo "#############################################"
 echo "  All Done! Reboot system To activate rice.  "
