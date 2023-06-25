@@ -90,7 +90,7 @@ sleep 2
 cd .. && rm -rf xero-catppuccin-git/
 echo
 sleep 1.5
-rm -rf .cache/
+rm -rf ~/.cache/
 sleep 1.5
 echo "#############################################"
 echo "  All Done! Reboot system To activate rice.  "
