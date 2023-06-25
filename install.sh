@@ -62,6 +62,9 @@ echo "Creating Backup & Applying new Rice, hold on..."
 echo "###############################################"
 mv ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~
 sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
+ln -sf "$HOME/.themes/Catppuccin-Mocha-Compact-Mauve-dark/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
+ln -sf "$HOME/.themes/Catppuccin-Mocha-Compact-Mauve-dark/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
+ln -sf "$HOME/.themes/Catppuccin-Mocha-Compact-Mauve-dark/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
 echo
 # Update SDDM configuration
 echo "Updating SDDM configuration..."

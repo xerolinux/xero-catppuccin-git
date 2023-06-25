@@ -96,5 +96,5 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 Placement=Centered
 
 [org.kde.kdecoration2]
-library=org.kde.lightly
-theme=Lightly
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__CatppuccinMocha-Classic
