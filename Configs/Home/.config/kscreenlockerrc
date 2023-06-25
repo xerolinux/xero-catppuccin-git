@@ -6,6 +6,6 @@ Autolock=false
 LockOnResume=false
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/Catppucin - 90.png
-PreviewImage=/usr/share/wallpapers/Catppucin - 90.png
+Image=/usr/share/wallpapers/Catppuccin - 14.png
+PreviewImage=/usr/share/wallpapers/Catppuccin - 14.png
 SlidePaths=/usr/share/wallpapers
