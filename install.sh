@@ -36,13 +36,6 @@ for package in $packages; do
 done
 sleep 2
 echo
-echo "Creating Backup & Applying new Rice, hold on..."
-echo "###############################################"
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~ && cp -Rf Configs/Home/.config/latte ~/.config/
-rm ~/.config/ksplashrc && cp Configs/Home/.config/ksplashrc ~/.config/
-sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
-sleep 2
-echo
 echo "Applying Our Custom Grub Theme..."
 echo "#################################"
 chmod +x Grub.sh
@@ -64,6 +57,12 @@ echo "Installing catppuccin KDE theme, Plz answer with y both times.."
 echo "###############################################################"
 git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd ..
 sleep 2
+echo
+echo "Creating Backup & Applying new Rice, hold on..."
+echo "###############################################"
+cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf -u Configs/Home/. ~
+rm ~/.config/ksplashrc && cp -u Configs/Home/.config/ksplashrc ~/.config/
+sudo cp -Rf -u Configs/System/. / && sudo cp -Rf -u Configs/Home/. /root/
 echo
 # Update SDDM configuration
 echo "Updating SDDM configuration..."
