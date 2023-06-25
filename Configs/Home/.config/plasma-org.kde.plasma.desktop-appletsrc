@@ -31,7 +31,7 @@ ToolBoxButtonState=topcenter
 ToolBoxButtonX=256
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/XeroCatppuccin4KAnniversary.png
+Image=file:///usr/share/wallpapers/XeroCatppuccin4K.png
 SlidePaths=/usr/share/wallpapers,$HOME/.local/share/wallpapers/
 
 [Containments][2]
@@ -57,7 +57,7 @@ ToolBoxButtonState=topcenter
 ToolBoxButtonX=256
 
 [Containments][2][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/XeroCatppuccin4KAnniversary.png
+Image=file:///usr/share/wallpapers/XeroCatppuccin4K.png
 SlidePaths=/usr/share/wallpapers,$HOME/.local/share/wallpapers/
 
 [Containments][3]
@@ -83,7 +83,7 @@ ToolBoxButtonState=topcenter
 ToolBoxButtonX=256
 
 [Containments][3][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/XeroCatppuccin4KAnniversary.png
+Image=file:///usr/share/wallpapers/XeroCatppuccin4K.png
 SlidePaths=/usr/share/wallpapers,$HOME/.local/share/wallpapers/
 
 
