@@ -48,8 +48,8 @@ echo
 echo "Installing catppuccin GTK4 theme & Applying LibAdwaita Patch"
 echo "############################################################"
 git clone --recurse-submodules https://github.com/catppuccin/gtk.git
-python -m venv . && source bin/activate && pip install --upgrade pip && pip install catppuccin
-cd gtk/ && python install.py mocha -l -a mauve --tweaks float -s compact -d ~/.themes && cd ..
+cd gtk/ && python -m venv . && source bin/activate && pip install --upgrade pip && pip install catppuccin
+python install.py mocha -l -a mauve --tweaks float -s compact -d ~/.themes && cd ..
 sleep 2
 echo
 # Clone KDE theme repository and install
@@ -60,9 +60,8 @@ sleep 2
 echo
 echo "Creating Backup & Applying new Rice, hold on..."
 echo "###############################################"
-cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf -u Configs/Home/. ~
-rm ~/.config/ksplashrc && cp -u Configs/Home/.config/ksplashrc ~/.config/
-sudo cp -Rf -u Configs/System/. / && sudo cp -Rf -u Configs/Home/. /root/
+mv ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -Rf Configs/Home/. ~
+sudo cp -Rf Configs/System/. / && sudo cp -Rf Configs/Home/. /root/
 echo
 # Update SDDM configuration
 echo "Updating SDDM configuration..."
