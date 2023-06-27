@@ -96,5 +96,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 Placement=Centered
 
 [org.kde.kdecoration2]
+BorderSize=Tiny
+BorderSizeAuto=false
 library=org.kde.kwin.aurorae
-theme=__aurorae__svg__CatppuccinMocha-Classic
+theme=__aurorae__svg__CatppuccinMocha-Modern

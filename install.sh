@@ -21,13 +21,13 @@ echo
 sleep 2
 echo "Removing No longer needed Packages"
 echo "##################################"
-sudo pacman -Rns --noconfirm kvantum &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-mauve-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm qt5-virtualkeyboard &>/dev/null; sudo pacman -Rns --noconfirm qt6-virtualkeyboard &>/dev/null
+sudo pacman -Rns --noconfirm kvantum &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-cursors-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-kde-theme-git &>/dev/null; sudo pacman -Rns --noconfirm catppuccin-gtk-theme-mocha-mauve &>/dev/null; sudo pacman -Rns --noconfirm qt5-virtualkeyboard &>/dev/null; sudo pacman -Rns --noconfirm qt6-virtualkeyboard &>/dev/null
 sleep 2
 echo
 echo "Installing Catppuccin Theme & Packages"
 echo "######################################"
 # Check if any of the specified packages are installed and install them if not present
-packages="lightly-git xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines xero-fonts-git"
+packages="lightly-git catppuccin-kde-theme-mauve-git catppuccin-cursors-mocha-mauve xero-catppuccin-sddm asian-fonts lightlyshaders-git xero-catppuccin-wallpapers tela-circle-icon-theme-dracula-git python-pip gnome-themes-extra gtk-engine-murrine gtk-engines xero-fonts-git"
 echo
 echo "Installing required packages..."
 echo "###############################"
@@ -50,12 +50,6 @@ echo "############################################################"
 git clone --recurse-submodules https://github.com/catppuccin/gtk.git
 cd gtk/ && python -m venv . && source bin/activate && pip install --upgrade pip && pip install catppuccin
 python install.py mocha -l -a mauve --tweaks float -s compact -d ~/.themes && cd ..
-sleep 2
-echo
-# Clone KDE theme repository and install
-echo "Installing catppuccin KDE theme, Plz answer with y both times.."
-echo "###############################################################"
-git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && sh install.sh 1 4 2 && cd ..
 sleep 2
 echo
 echo "Creating Backup & Applying new Rice, hold on..."
