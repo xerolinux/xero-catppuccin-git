@@ -4,7 +4,7 @@
 
 > I would like to clarify one very important aspect of ricing. We use custom themes in every one of our rices, and those might not get updated very often, if at all by their respective developers/artists, which might result in some parts of the system and apps not to get themed correctly. That, my friends, is unfortunately out of our hands.
 
-![XeroCat](https://i.imgur.com/I5MayRg.png)
+![XeroCat](https://i.imgur.com/qJTPsZ5.png)
 
 -> Performance :
 
