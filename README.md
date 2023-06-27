@@ -16,6 +16,10 @@ Just clone this repository, run terminal inside directory and run installer Scri
 
 `git clone https://github.com/xerolinux/xero-catppuccin-git && cd xero-catppuccin-git && ./install.sh`
 
+### Support
+
+Since I wasn't the one who worked on this rice alone, with the majority of the work, especially the wallpaper, Grub and overall consistency which were all done by my good friend and brother [@TeddyBearKilla](https://github.com/TeddyBearKilla), please feel free to show him some love by buying him a coffee or two on [**Ko-Fi**](https://ko-fi.com/teddybearkilla)
+
 ### Reminder
 
 Please follow the script instructions and answer some prompts with `y` when asked, if any, and select the right option for others. You might see a few errors pop up here n there, ignore them and let it do its thing. Once script is done your are urged to save any work you are doing and reboot for rice to be loaded and applied. Keep in mind that it will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [Discord Server](https://discord.gg/Xg6T78ahtK). Best of luck !
