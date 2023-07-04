@@ -8,7 +8,7 @@
 
 -> Performance :
 
-> This rice as with all rices has been throughly optimized for best performance.. If you have issues, kindly report them on our socials, Telegram/Discord.. we will try our best to help...
+> This rice as with all rices has been throughly optimized for best performance on higher-end systems.. Although it might work on lower-end ones, for better performance I do not recommend that you use it there. So please do not report any performance issues. 
 
 # Installation
 
