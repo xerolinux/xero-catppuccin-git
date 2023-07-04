@@ -1,6 +1,6 @@
 ### This is XeroLinux's Catppuccin Rice
 
-### Disclosure
+### Disclaimer
 
 > I would like to clarify one very important aspect of ricing. We use custom themes in every one of our rices, and those might not get updated very often, if at all by their respective developers/artists, which might result in some parts of the system and apps not to get themed correctly. That, my friends, is unfortunately out of our hands.
 
