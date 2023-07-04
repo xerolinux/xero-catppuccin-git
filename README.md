@@ -22,7 +22,7 @@ Since I wasn't the one who worked on this rice alone, with the majority of the w
 
 ### Reminder
 
-Please follow the script instructions and answer some prompts with `y` when asked, if any, and select the right option for others. You might see a few errors pop up here n there, ignore them and let it do its thing. Once script is done your are urged to save any work you are doing and reboot for rice to be loaded and applied. Keep in mind that it will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [Discord Server](https://discord.gg/Xg6T78ahtK). Best of luck !
+Please follow the script instructions and answer some prompts correctly when asked, if any. Once script is done your are urged to save any work you are doing and reboot for rice to be loaded and applied. Keep in mind that it will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [Discord Server](https://discord.gg/Xg6T78ahtK). Best of luck !
 
 ### Applying Theme/Rice Updates
 
