@@ -18,7 +18,7 @@ Just clone this repository, run terminal inside directory and run installer Scri
 
 ### Support
 
-Since I wasn't the one who worked on this rice alone, with the majority of the work, especially the wallpaper, Grub and overall consistency which were all done by my good friend and brother [@TeddyBearKilla](https://github.com/TeddyBearKilla), please feel free to show him some love by buying him a coffee or two on [**Ko-Fi**](https://ko-fi.com/teddybearkilla)
+I didn't work on this rice alone, with the majority of the work, especially the wallpaper, Grub and overall consistency which were all done by my good friend and brother [@TeddyBearKilla](https://github.com/TeddyBearKilla), so please feel free to show him some love by buying him a [**Coffee**](https://ko-fi.com/teddybearkilla) or two...
 
 ### Reminder
 
